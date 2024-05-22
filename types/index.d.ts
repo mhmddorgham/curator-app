@@ -27,7 +27,7 @@ declare type CategoryLabel =
   | "Shopping"
   | "Web Tools";
 
-declare type NavLinksLabel = "Home" | "About" | "Sponsor" | "Contact";
+declare type NavLinksLabel = "Home" | "About" | "Sponsor" | "Contact" | "Cards";
 declare interface IStackCard {
   title: string;
   description: string;

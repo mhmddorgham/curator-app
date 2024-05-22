@@ -15,7 +15,7 @@ function page() {
           })}
       </div>
 
-      <Button className=" fixed right-9 bottom-16 shadow-lg z-[300] ">
+      <Button className=" fixed right-9 bottom-9 semi-lg:bottom-16 shadow-lg z-[300] ">
         <ShoppingCartIcon className="w-6 h-6 text-white mr-2" />
         Buy for 69$
       </Button>

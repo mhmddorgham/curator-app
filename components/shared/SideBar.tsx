@@ -52,8 +52,8 @@ export default function SideBar() {
     };
   }, []);
 
-  const wrapperClasses = `min-h-full h-screen px-4 pt-8 pb-4 bg-[#F9FAFB] flex justify-between flex-col shadow sticky !top-0 left-0  z-100 rounded-3xl border border-gray-100    ${
-    toggleCollapse ? "w-20" : "w-64"
+  const wrapperClasses = `min-h-full h-screen px-4  pb-4 bg-[#F9FAFB] flex justify-between flex-col shadow sticky !top-0 left-0  z-100 rounded-3xl border border-gray-100    ${
+    toggleCollapse ? "w-20 pt-8" : "w-64 pt-0"
   }`;
   const ArrowClass = `${
     toggleCollapse ? "rotate-180 duration-300 w-[45px] ml-2" : "duration-300"
@@ -132,7 +132,7 @@ export default function SideBar() {
                 <Image
                   src="/assets/images/logo_2.png"
                   width={1000}
-                  height={1000}
+                  height={100}
                   alt="logo"
                   className="w-[1000px] "
                 />
@@ -162,7 +162,7 @@ export default function SideBar() {
             }`}
           >
             <ArrowLeftCircleIcon
-              className={`text-black  w-[20px] h-[20px] duration-100  ${
+              className={`text-black  w-[25px] h-[25px] duration-100  ${
                 toggleCollapse ? "rotate-[180deg] translate-x-9" : ""
               }`}
             />
@@ -177,7 +177,7 @@ export default function SideBar() {
         >
           Categories
         </h2>
-        <div className="h-full flex flex-col gap-5 max-h-[60vh] overflow-y-auto border-b border-gray-200">
+        <div className="h-full w-full max-h-[50vh] flex flex-col gap-5 overflow-y-auto border-b border-gray-200">
           {Categories.map((category, i) => {
             const IconComponent = iconMapping[category.label as CategoryLabel];
             return (
@@ -207,7 +207,7 @@ export default function SideBar() {
           })}
         </div>
 
-        <div className="mt-4 w-full flex flex-col justify-center items-center gap-2 ">
+        <div className="mt-2 w-full flex flex-col justify-center items-center gap-2 semi-lg:translate-y-11 ">
           <div className="!px-3 !py-3 rounded-3xl flex justify-center items-center gap-3 bg-black text-white cursor-pointer hover:opacity-90 duration-100 w-full">
             <FolderPlusIcon className="text-gray-500  w-[30px] h-[30px] " />
             {!toggleCollapse && (

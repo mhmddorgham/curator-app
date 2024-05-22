@@ -32,7 +32,7 @@ export default function SponserDetails() {
           </div>
         </div> */}
       </div>
-      <div className="w-full  flex flex-col semi-md:flex-row items-start gap-4   ">
+      <div className="w-full  flex flex-col semi-lg:flex-row items-start gap-4   ">
         {/* first */}
         <div className="w-full h-fit flex flex-col border border-gray-200 rounded-[30px] px-7 py-6 ">
           <div className="w-full h-fit py-3 relative">
@@ -119,7 +119,7 @@ export default function SponserDetails() {
           </div>
         </div>
       </div>
-      <div className="w-full h-full bg-[#EEF1F6] rounded-3xl flex-between min-h-20 max-h-28 py-4 px-5 my-3 mx-3">
+      <div className="w-full h-full bg-[#EEF1F6] rounded-3xl flex flex-col semi-md:flex-row justify-between items-center gap-8 min-h-20 semi-lg:max-h-28 py-4 px-5 my-3 mx-3">
         <div>
           <p className="p-medium-24">Looking for more?</p>
           <p className="text-primary-p p-regular-18">

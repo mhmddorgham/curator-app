@@ -6,7 +6,7 @@ import React from "react";
 export default function page() {
   return (
     <main className="w-full h-full ">
-      <div className="w-full  grid grid-cols-1 semi-md:grid-cols-3 gap-3  ">
+      <div className="w-full  grid grid-cols-1 semi-lg:grid-cols-3 gap-3  ">
         {ImagesCards &&
           ImagesCards.map((card, idx) => {
             return (
@@ -14,7 +14,7 @@ export default function page() {
                 <Image
                   src={card.image}
                   alt="image"
-                  className="max-w-[390px] max-h-[390px] rounded-lg object-contain mx-auto"
+                  className="w-full h-full max-w-[390px] max-h-[390px] rounded-lg object-contain mx-auto"
                 />
               </div>
             );

@@ -12,7 +12,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { Button } from "../ui/button";
 export default function ContactDetails() {
   return (
-    <div className="w-full flex flex-col semi-md:flex-row items-start gap-2   ">
+    <div className="w-full flex flex-col semi-lg:flex-row items-start gap-2   ">
       <div className="w-full h-fit flex flex-col border border-gray-200 rounded-[50px] px-7 py-6 ">
         <div className=" h-fit py-3">
           <div className="">

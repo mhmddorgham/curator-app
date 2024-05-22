@@ -3,6 +3,7 @@ export const NavItems = [
   { id: 2, label: "About", link: "/about" },
   { id: 3, label: "Sponsor", link: "/sponsor" },
   { id: 4, label: "Contact", link: "/contact" },
+  { id: 5, label: "Cards", link: "/cards" },
 ];
 
 export const socialLinks = [

@@ -10,6 +10,7 @@ import {
   MagnifyingGlassIcon,
   UserGroupIcon,
   ChatBubbleLeftEllipsisIcon,
+  PhotoIcon,
 } from "@heroicons/react/24/solid";
 import { Categories } from "@/constant/sidebar";
 import { FaXTwitter } from "react-icons/fa6";
@@ -35,6 +36,7 @@ export default function NavBar() {
     About: UserGroupIcon,
     Sponsor: HiSpeakerphone,
     Contact: ChatBubbleLeftEllipsisIcon,
+    Cards: PhotoIcon,
   };
 
   const iconsStyle =
