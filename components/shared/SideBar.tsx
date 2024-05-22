@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 // import { MainItem, AnalyticsItem, DahsboardItem,  } from "@/constants";
 import Link from "next/link";
@@ -36,7 +36,6 @@ export default function SideBar() {
   const [toggleCollapse, setToggleCollapse] = useState(false);
   const [isCollapsible, setIsCollapsible] = useState(false);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const activeLink = "bg-[#EEF1F6] border-gray-200 text-black ";
   useEffect(() => {
     const handleResize = () => {
