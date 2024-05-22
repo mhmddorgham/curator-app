@@ -26,3 +26,10 @@ declare type CategoryLabel =
   | "Services"
   | "Shopping"
   | "Web Tools";
+
+declare type NavLinksLabel = "Home" | "About" | "Sponsor" | "Contact";
+declare interface IStackCard {
+  title: string;
+  description: string;
+  image: StaticImageData;
+}

@@ -3,6 +3,8 @@
 
 import NavBar from "@/components/shared/NavBar";
 import SideBar from "@/components/shared/SideBar";
+import { Button } from "@/components/ui/button";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
 export default function RootLayout({
   children,

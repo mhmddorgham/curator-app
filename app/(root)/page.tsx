@@ -1,5 +1,8 @@
 import ProductCard from "@/components/shared/ProductCard";
+import { Button } from "@/components/ui/button";
 import { Products } from "@/constant/products";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
+
 import React from "react";
 
 function page() {
@@ -11,6 +14,11 @@ function page() {
             return <ProductCard key={idx} {...product} />;
           })}
       </div>
+
+      <Button className=" fixed right-9 bottom-16 shadow-lg z-[300] ">
+        <ShoppingCartIcon className="w-6 h-6 text-white mr-2" />
+        Buy for 69$
+      </Button>
     </main>
   );
 }

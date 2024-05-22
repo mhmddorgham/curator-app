@@ -7,6 +7,9 @@ export default function Page({ params }: { params: { category: string } }) {
   );
   return (
     <main className="w-full h-full ">
+      <h2 className="text-4xl font-bold py-6 capitalize px-3">
+        {params.category}
+      </h2>
       <div className="w-full  grid grid-cols-1 semi-md:grid-cols-3 gap-3  ">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product, idx) => (

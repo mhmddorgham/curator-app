@@ -10,11 +10,11 @@ import React, { useState } from "react";
 import { HiSpeakerphone } from "react-icons/hi";
 import { Button } from "../ui/button";
 
-function ProductCard(props: ProductCardProps) {
+export default function ProductCardTwo(props: ProductCardProps) {
   const [hoveredIndex, setHoveredIndex] = useState<string>("");
   const [viewArrow, setViewArrow] = useState<boolean>(false);
   return (
-    <Link href={`/products/${props.id}`}>
+    <Link href={`${props.id}`}>
       <div
         onMouseEnter={() => setHoveredIndex(props.id)}
         onMouseLeave={() => setHoveredIndex("")}
@@ -58,7 +58,7 @@ function ProductCard(props: ProductCardProps) {
         </div>
 
         {/* button effect: */}
-        <button
+        {/* <button
           onMouseEnter={() => setViewArrow(true)}
           onMouseLeave={() => setViewArrow(false)}
           className={`flex items-center gap-3  z-[100] absolute  right-5 duration-500 text-[14px] text-white rounded-xl px-3 py-[6px] !bg-[#393c3d] border-[5px] border-opacity-20 ${
@@ -71,10 +71,8 @@ function ProductCard(props: ProductCardProps) {
               viewArrow ? " right-0" : " right-[-10px] opacity-0 h-[0] w-[0]"
             }`}
           />
-        </button>
+        </button> */}
       </div>
     </Link>
   );
 }
-
-export default ProductCard;

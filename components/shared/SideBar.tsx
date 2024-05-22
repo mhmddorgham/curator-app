@@ -37,7 +37,7 @@ export default function SideBar() {
   const [isCollapsible, setIsCollapsible] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const activeLink = "bg-[#EEF1F6] border-gray-200 ";
+  const activeLink = "bg-[#EEF1F6] border-gray-200 text-black ";
   useEffect(() => {
     const handleResize = () => {
       setToggleCollapse(window.innerWidth < 768);
@@ -52,7 +52,7 @@ export default function SideBar() {
     };
   }, []);
 
-  const wrapperClasses = `min-h-full h-screen px-4 pt-8 pb-4 bg-[#F9FAFB] flex justify-between flex-col shadow-xl sticky !top-0 left-0  z-100 rounded-3xl border border-gray-100    ${
+  const wrapperClasses = `min-h-full h-screen px-4 pt-8 pb-4 bg-[#F9FAFB] flex justify-between flex-col shadow sticky !top-0 left-0  z-100 rounded-3xl border border-gray-100    ${
     toggleCollapse ? "w-20" : "w-64"
   }`;
   const ArrowClass = `${
@@ -128,13 +128,31 @@ export default function SideBar() {
                 alt="logo"
               /> */}
 
-              <h1
+              {toggleCollapse ? (
+                <Image
+                  src="/assets/images/logo_2.png"
+                  width={1000}
+                  height={1000}
+                  alt="logo"
+                  className="w-[1000px] "
+                />
+              ) : (
+                <Image
+                  src="/assets/images/logo_1.png"
+                  width={1000}
+                  height={1000}
+                  alt="logo"
+                  className="w-full h-[80px] "
+                />
+              )}
+
+              {/* <h1
                 className={`text-2xl font-bold text-text1 ${
                   toggleCollapse ? "hidden" : ""
                 }`}
               >
                 the<span className="text-gray-500">handles.</span>
-              </h1>
+              </h1> */}
             </div>
           </Link>
           <div
@@ -145,7 +163,7 @@ export default function SideBar() {
           >
             <ArrowLeftCircleIcon
               className={`text-black  w-[20px] h-[20px] duration-100  ${
-                toggleCollapse ? "rotate-[180deg]" : ""
+                toggleCollapse ? "rotate-[180deg] translate-x-9" : ""
               }`}
             />
           </div>
@@ -165,11 +183,17 @@ export default function SideBar() {
             return (
               <Link key={i} href={category.link} prefetch={false}>
                 <div
-                  className={`flex items-center justify-start gap-2 relative px-2 py-[6px] rounded-2xl duration-200  border  w-full ${
-                    pathname === category.link ? activeLink : "border-[#F9FAFB]"
+                  className={`flex items-center justify-start gap-2 relative px-2 py-[6px] rounded-2xl duration-200  border  w-full  hover:bg-[#EEF1F6] hover:border-gray-200 hover:text-gray-600  ${
+                    pathname === category.link
+                      ? activeLink
+                      : "border-[#F9FAFB] text-primary-p"
                   }  `}
                 >
-                  <IconComponent className="text-gray-500 w-[24px] h-[24px]" />
+                  <IconComponent
+                    className={`w-[24px] h-[24px] duration-200  ${
+                      pathname === category.link ? "text-gray-600 " : " "
+                    }`}
+                  />
                   <h1
                     className={`text-text3  border-gray-200 ${
                       toggleCollapse ? "hidden" : ""
