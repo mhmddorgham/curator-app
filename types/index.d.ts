@@ -2,6 +2,27 @@ declare type ProductCardProps = {
   id: string;
   title?: string;
   description?: string;
-  tag?: string;
+  tag?: "New" | "Highlight" | "Sponsored" | "";
+  category?: string;
   image?: string;
 };
+declare type CategoryLabel =
+  | "All"
+  | "AI"
+  | "Administration"
+  | "Analytics"
+  | "APIs"
+  | "Bug Hunt"
+  | "Business"
+  | "CMS"
+  | "Education"
+  | "Developers"
+  | "Finance"
+  | "Logistic"
+  | "News"
+  | "Payments"
+  | "Privacy"
+  | "Repairment"
+  | "Services"
+  | "Shopping"
+  | "Web Tools";

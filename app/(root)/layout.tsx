@@ -20,7 +20,7 @@ export default function RootLayout({
       <div className="hidden md:block  min-h-full h-full sticky top-0 left-0  ">
         <SideBar />
       </div>
-      <main className="flex-1 overflow-x-hidden border-[2px] border-gray-100 rounded-lg p-3">
+      <main className="flex-1 overflow-x-hidden border-[2px] border-gray-100 rounded-lg p-3 ">
         {children}
       </main>
     </section>

@@ -2,7 +2,7 @@ import { ArrowLeftCircleIcon } from "@heroicons/react/24/solid";
 export const Categories = [
   { id: 1, label: "All", link: "/" },
   { id: 2, label: "AI", link: "/ai" },
-  { id: 3, label: "Administration", link: "/Admin" },
+  { id: 3, label: "Administration", link: "/admin" },
   { id: 4, label: "Analytics", link: "/analytics" },
   { id: 5, label: "APIs", link: "/api" },
   { id: 6, label: "Bug Hunt", link: "/bug" },
@@ -11,4 +11,12 @@ export const Categories = [
   { id: 9, label: "Education", link: "/education" },
   { id: 10, label: "Developers", link: "/developers" },
   { id: 11, label: "Finance", link: "/finance" },
+  { id: 12, label: "Logistic", link: "/logistic" },
+  { id: 13, label: "News", link: "/news" },
+  { id: 14, label: "Payments", link: "/payments" },
+  { id: 15, label: "Privacy", link: "/privacy" },
+  { id: 16, label: "Repairment", link: "/repairment" },
+  { id: 17, label: "Services", link: "/services" },
+  { id: 18, label: "Shopping", link: "/shopping" },
+  { id: 19, label: "Web Tools", link: "/web-tools" },
 ];

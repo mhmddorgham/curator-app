@@ -9,7 +9,27 @@ import {
   EnvelopeIcon,
   FolderPlusIcon,
 } from "@heroicons/react/24/solid";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import {
+  BugAntIcon,
+  HomeIcon,
+  CogIcon,
+  AcademicCapIcon,
+  ChartBarIcon,
+  BeakerIcon,
+  BriefcaseIcon,
+  CubeIcon,
+  BookOpenIcon,
+  UserGroupIcon,
+  CurrencyDollarIcon,
+  TruckIcon,
+  NewspaperIcon,
+  CreditCardIcon,
+  FingerPrintIcon,
+  WrenchIcon,
+  CalculatorIcon,
+  ShoppingBagIcon,
+  GlobeAltIcon,
+} from "@heroicons/react/24/outline";
 import { Categories } from "@/constant/sidebar";
 import { Button } from "../ui/button";
 export default function SideBar() {
@@ -17,7 +37,7 @@ export default function SideBar() {
   const [isCollapsible, setIsCollapsible] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const activeLink = "bg-[#EEF1F6] border-gray-300 ";
+  const activeLink = "bg-[#EEF1F6] border-gray-200 ";
   useEffect(() => {
     const handleResize = () => {
       setToggleCollapse(window.innerWidth < 768);
@@ -52,6 +72,46 @@ export default function SideBar() {
   //   [router.pathname]
   // );
 
+  // Create an icon mapping
+  // const iconMapping = {
+  //   "All": HomeIcon,
+  //   "AI": BeakerIcon,
+  //   "Administration": CogIcon,
+  //   "Analytics": ChartBarIcon,
+  //   "APIs": CubeIcon,
+  //   "Bug Hunt": AcademicCapIcon,
+  //   "Business": BriefcaseIcon,
+  //   "CMS": BookOpenIcon,
+  //   "Education": UserGroupIcon,
+  //   "Developers": HomeIcon, // Use appropriate icon
+  //   "Finance": CurrencyDollarIcon,
+  // };
+  type IconMappingType = Record<
+    CategoryLabel,
+    React.FC<React.SVGProps<SVGSVGElement>>
+  >;
+  const iconMapping: IconMappingType = {
+    All: HomeIcon,
+    AI: BeakerIcon,
+    Administration: CogIcon,
+    Analytics: ChartBarIcon,
+    APIs: CubeIcon,
+    "Bug Hunt": BugAntIcon,
+    Business: BriefcaseIcon,
+    CMS: BookOpenIcon,
+    Education: AcademicCapIcon,
+    Developers: HomeIcon, // Use appropriate icon
+    Finance: CurrencyDollarIcon,
+    Logistic: TruckIcon,
+    News: NewspaperIcon,
+    Payments: CreditCardIcon,
+    Privacy: FingerPrintIcon,
+    Repairment: WrenchIcon,
+    Services: CalculatorIcon,
+    Shopping: ShoppingBagIcon,
+    "Web Tools": GlobeAltIcon,
+  };
+
   return (
     <section
       className={wrapperClasses}
@@ -73,7 +133,7 @@ export default function SideBar() {
                   toggleCollapse ? "hidden" : ""
                 }`}
               >
-                the<span className="text-gray-500">curator.</span>
+                the<span className="text-gray-500">handles.</span>
               </h1>
             </div>
           </Link>
@@ -93,7 +153,7 @@ export default function SideBar() {
 
         {/* Categories */}
         <h2
-          className={`text-gray-400 font-[500] py-2 ml-2 text-lg ${
+          className={`text-gray-400 font-[500] pb-2 ml-2 text-lg ${
             toggleCollapse ? "hidden" : ""
           }`}
         >
@@ -101,14 +161,15 @@ export default function SideBar() {
         </h2>
         <div className="h-full flex flex-col gap-5 max-h-[60vh] overflow-y-auto border-b border-gray-200">
           {Categories.map((category, i) => {
+            const IconComponent = iconMapping[category.label as CategoryLabel];
             return (
               <Link key={i} href={category.link} prefetch={false}>
                 <div
-                  className={`flex items-center justify-start gap-5 relative px-2 py-2 rounded-2xl duration-200  border  w-full mr-1 ${
+                  className={`flex items-center justify-start gap-2 relative px-2 py-[6px] rounded-2xl duration-200  border  w-full ${
                     pathname === category.link ? activeLink : "border-[#F9FAFB]"
                   }  `}
                 >
-                  <HomeIcon className="text-gray-500  w-[30px] h-[30px]" />
+                  <IconComponent className="text-gray-500 w-[24px] h-[24px]" />
                   <h1
                     className={`text-text3  border-gray-200 ${
                       toggleCollapse ? "hidden" : ""
